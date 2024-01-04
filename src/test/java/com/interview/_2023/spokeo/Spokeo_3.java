@@ -39,8 +39,6 @@ import static org.hamcrest.Matchers.is;
  * EXAMPLE #1
  *      In ~  Seattle, 120
  *      Out ~ TBC Sky Lounge
- * import static org.hamcrest.MatcherAssert.assertThat;
- * import static org.hamcrest.Matchers.is;
  *
  * @author NV
  * @since 1/3/2024
