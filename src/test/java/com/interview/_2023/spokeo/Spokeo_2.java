@@ -1,0 +1,23 @@
+package com.interview._2023.spokeo;
+
+import org.junit.jupiter.api.Test;
+
+/**
+ * NAME -
+ * COMPANY -
+ * NOTES -
+ * CONSTRAINTS -
+ * EXAMPLE #1     In ~     Out ~     Note ~
+ * import static org.hamcrest.MatcherAssert.assertThat;
+ * import static org.hamcrest.Matchers.is;
+ *
+ * @author NV
+ * @since 1/3/2024
+ */
+public class Spokeo_2 {
+
+    @Test
+    void testStuff() {
+
+    }
+}
