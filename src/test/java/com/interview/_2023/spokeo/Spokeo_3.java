@@ -7,11 +7,16 @@ import java.net.URL;
 import java.util.Scanner;
 
 /**
- * NAME -
- * COMPANY -
- * NOTES -
- * CONSTRAINTS -
- * EXAMPLE #1     In ~     Out ~     Note ~
+ * NAME
+ *      -
+ * NOTES
+ *      -
+ * CONSTRAINTS
+ *      -
+ * EXAMPLE #1
+ *      In ~
+ *      Out ~
+ *      Note ~
  * import static org.hamcrest.MatcherAssert.assertThat;
  * import static org.hamcrest.Matchers.is;
  *

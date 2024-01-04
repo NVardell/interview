@@ -3,11 +3,16 @@ package com.interview._2023.spokeo;
 import org.junit.jupiter.api.Test;
 
 /**
- * NAME -
- * COMPANY -
- * NOTES -
- * CONSTRAINTS -
- * EXAMPLE #1     In ~     Out ~     Note ~
+ * NAME
+ *      -
+ * NOTES
+ *      -
+ * CONSTRAINTS
+ *      -
+ * EXAMPLE #1
+ *      In ~
+ *      Out ~
+ *      Note ~
  * import static org.hamcrest.MatcherAssert.assertThat;
  * import static org.hamcrest.Matchers.is;
  *
