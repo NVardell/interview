@@ -6,6 +6,9 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.Scanner;
 
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.is;
+
 /**
  * NAME
  *      - REST API: The Best Restaurant
@@ -83,7 +86,7 @@ public class Spokeo_3 {
     }
 
 
-    @Test void testStuff() {
-
+    @Test void testStuff() throws IOException {
+        assertThat(bestRestaurant("Seattle", 120), is("TBC Sky Lounge"));
     }
 }
