@@ -21,8 +21,7 @@ import org.junit.jupiter.api.Test;
  */
 public class Spokeo_2 {
 
-    @Test
-    void testStuff() {
+    @Test void testStuff() {
 
     }
 }
