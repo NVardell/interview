@@ -20,8 +20,6 @@ import static org.hamcrest.Matchers.is;
  * PROBLEM
  *      - Find the minimum length subarray that is good.
  *      - If there is no such subarray, return -1.
- * CONSTRAINTS
- *      -
  * EXAMPLE #1
  *      In  ~ arr=[2, 2, 1, 1, 3]
  *            k=3
