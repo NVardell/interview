@@ -15,8 +15,8 @@ import static org.hamcrest.Matchers.is;
  * NAME
  *      - Minimum Length Subarray
  * NOTES
- *      - For an array Of 'n' positive integers arr[n] and an integer 'k',
- *        a subarray is 'good' if it consists of at least 'k' distinct integers.
+ *      - For an array of 'n' positive integers 'arr[n]' and an integer 'k',
+ *        a sub-array is 'good' if it consists of at least 'k' distinct integers.
  * PROBLEM
  *      - Find the minimum length subarray that is good.
  *      - If there is no such subarray, return -1.
@@ -24,7 +24,7 @@ import static org.hamcrest.Matchers.is;
  *      In  ~ arr=[2, 2, 1, 1, 3]
  *            k=3
  *      Out ~ 4
- *      Note ~ The subarrays with at least k=3 distinct integers are...
+ *      Note ~ The sub-arrays with at least k=3 distinct integers are...
  *             [2, 2, 1, 1, 3] and [2, 1, 1,3].
  *             Return 4, the minimum length of a good subarray.
  *
@@ -76,7 +76,7 @@ import static org.hamcrest.Matchers.is;
         return minLength;
     }
     @Test void testStuff() {
-        assertThat(findMinimumLengthSubarray(Arrays.asList(1,2), 3), is(-1));
+        assertThat(findMinimumLengthSubarray(Arrays.asList(1,2), 4), is(-1));
         assertThat(findMinimumLengthSubarray(Arrays.asList(2, 2, 1, 1, 3), 3), is(4));
         assertThat(findMinimumLengthSubarray(Arrays.asList(3, 2, 3, 3, 1, 3), 3), is(4));
     }
