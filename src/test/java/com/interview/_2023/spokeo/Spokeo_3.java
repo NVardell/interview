@@ -3,8 +3,11 @@ package com.interview._2023.spokeo;
 import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
-import java.net.URL;
-import java.util.Scanner;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.net.http.HttpClient;
+import java.net.http.HttpRequest;
+import java.net.http.HttpResponse;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
@@ -75,16 +78,24 @@ public class Spokeo_3 {
      * @param cost - Max estimated cost of an outlet
      * @return restaurant - Highest rating @ cost
      */
-    public static String bestRestaurant(String city, int cost) throws IOException {
+    public static String bestRestaurant(String city, int cost) throws IOException, URISyntaxException, InterruptedException {
 
-        URL req = new URL("");
-        Scanner scanner = new Scanner(req.openStream());
+
+        HttpRequest req = HttpRequest.newBuilder()
+                .uri(new URI("https://jsonmock.hackerrank.com/api/food_outlets"))
+                .GET()
+                .build();
+
+        HttpResponse<String> res = HttpClient.newHttpClient()
+                .send(req, HttpResponse.BodyHandlers.ofString());
+
+        String jsonRes = res.body();
 
         return null;
     }
 
 
-    @Test void testStuff() throws IOException {
+    @Test void testStuff() throws IOException, URISyntaxException, InterruptedException {
         assertThat(bestRestaurant("Seattle", 120), is("TBC Sky Lounge"));
     }
 }
