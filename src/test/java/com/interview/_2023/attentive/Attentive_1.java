@@ -10,22 +10,27 @@ import static org.hamcrest.Matchers.is;
 
 /**
  * NAME
- *      -
+ *      - Follow the Path
  * NOTES
- *      -
- * CONSTRAINTS
- *      -
- * EXAMPLE #1
- *      In ~
- *      Out ~
- *      Note ~
+ *      - You are given a list of strings, representing a 2-dimensional grid.
+ *      - The first character of the first string is the upper left tile, (0, 0).
+ *      - The grid ALWAYS has the same size.
+ *          + Width  = 15 (Each string contains 15 characters.)
+ *          + Height = 10 (List contains 10 strings.)
+ *      - The grid contains a unique path made of stars (*) & lowercase letters.
+ *      - The path can move in four directions. (Up, Down, Left, Right.)
+ *      - The path may start || end with a letter
+ * PROBLEM
+ *      - Given a list of strings, follow the path recording & returning a
+ *        string containing all the letters encountered along the way.
  *
  * @author NV
  * @since 1/10/2024
  */
-public class Attentive_1 {
+class Attentive_1 {
 
     /**
+     * Follow the path and return all of the letters collected along the way!
      *
      * @param gridMap - List of 10 strings (each having 15 characters) defining a 2D grid.
      * @return result - String made with the encountered letters, while following the path.

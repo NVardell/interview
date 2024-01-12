@@ -7,15 +7,23 @@ import static org.hamcrest.Matchers.is;
 
 /**
  * NAME
- *      -
- * NOTES
- *      -
- * CONSTRAINTS
- *      -
+ *      - Top Stocks
+ * PROBLEM
+ *      - Given a list of stocks & prices, return the 3 top stocks.
+ *      - Method should return an array containing the names of the
+ *        three stocks with the highest average value.
+ *          + The array should be sorted by decreasing average value.
+ *      - Guaranteed that every stock will have a unique average.
+ * INPUTS
+ *      - An array of strings (stocks), representing the considered stocks.
+ *      - An array of 2 dimensions (prices), representing the stock prices
+ *        (inner lists) for each day (outer lists).
  * EXAMPLE #1
- *      In ~
- *      Out ~
- *      Note ~
+ *      In ~ Stocks = [ AMZN, GOOG, ORLY, ULTA ]
+ *           Prices = [[ 1.11, 2.2, 3.333, 4.4],
+ *                     [ 1.11, 2.2, 3.333, 4.4],
+ *                     [ 1.11, 2.2, 3.333, 4.4]]
+ *      Out ~ [ ULTA, ORLY, GOOG ]
  *
  * @author NV
  * @since 1/10/2024
