@@ -12,7 +12,7 @@ import lombok.Data;
 @Data @Builder public class FoodOutlet {
     private int id;
     private String name;
-    private String co;
+    private String city;
     private int estimated_cost;
     private UserRating user_rating;
 }
