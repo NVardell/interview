@@ -1,5 +1,7 @@
 package com.interview._2023.spokeo;
 
+import com.google.gson.Gson;
+import com.interview.common.outlet.FoodOutlets;
 import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
@@ -89,7 +91,7 @@ public class Spokeo_3 {
         HttpResponse<String> res = HttpClient.newHttpClient()
                 .send(req, HttpResponse.BodyHandlers.ofString());
 
-        String jsonRes = res.body();
+        FoodOutlets foodOutlets = new Gson().fromJson(res.body(), FoodOutlets.class);
 
         return null;
     }
