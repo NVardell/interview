@@ -1,6 +1,7 @@
 package com.interview._2023.spokeo;
 
 import com.google.gson.Gson;
+import com.google.gson.JsonObject;
 import com.interview.common.outlet.FoodOutlets;
 import org.junit.jupiter.api.Test;
 
@@ -92,6 +93,7 @@ public class Spokeo_3 {
                 .send(req, HttpResponse.BodyHandlers.ofString());
 
         FoodOutlets foodOutlets = new Gson().fromJson(res.body(), FoodOutlets.class);
+        JsonObject jsonResponse = new Gson().fromJson(res.body(), JsonObject.class);
 
         return null;
     }
