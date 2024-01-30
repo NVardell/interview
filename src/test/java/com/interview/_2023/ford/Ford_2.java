@@ -6,9 +6,7 @@ import com.interview.common.outlet.FoodOutlets;
 import lombok.SneakyThrows;
 import org.junit.jupiter.api.Test;
 
-import java.io.IOException;
 import java.net.URI;
-import java.net.URISyntaxException;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
@@ -89,7 +87,9 @@ public class Ford_2 {
         return bestRestaurantName;
     }
 
-    @Test void testSolution_2() throws IOException, URISyntaxException, InterruptedException {
+    @Test void testSolution_2() {
         assertThat(bestRestaurant("Seattle", 500), is("Cafe Juanita"));
+        assertThat(bestRestaurant("Chicago", 4000), is("AB's - Absolute Barbecues"));
+        assertThat(bestRestaurant("Boston", 750), is("Uncle Jack's"));
     }
 }
