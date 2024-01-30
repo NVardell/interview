@@ -1,9 +1,17 @@
 package com.interview._2023.ford;
 
+import com.google.gson.Gson;
+import com.interview.common.outlet.FoodOutlet;
+import com.interview.common.outlet.FoodOutlets;
+import lombok.SneakyThrows;
 import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
+import java.net.URI;
 import java.net.URISyntaxException;
+import java.net.http.HttpClient;
+import java.net.http.HttpRequest;
+import java.net.http.HttpResponse;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
@@ -32,7 +40,7 @@ import static org.hamcrest.Matchers.is;
  */
 public class Ford_2 {
 
-    private static final String URL = "https://jsonmock.hackerrank.com/api/food_outlets?city=";
+    private static final String URL = "https://jsonmock.hackerrank.com/api/food_outlets?";
 
     /**
      *
@@ -40,8 +48,45 @@ public class Ford_2 {
      * @param votes - Min # of votes required
      * @return string - Name of best restaurant
      */
-    private String bestRestaurant(String city, int votes) {
-        return "";
+    @SneakyThrows private String bestRestaurant(String city, int votes) {
+
+        int page = 0, totalPages = 0, bestRestaurantVotes = 0;
+        String bestRestaurantName = "";
+        double bestRestaurantRating = 0;
+
+        while(page <= totalPages) {
+            HttpRequest req = HttpRequest.newBuilder()
+                    .uri(new URI(URL
+                            + "city=" + city
+                            + "&page=" + page++))
+                    .GET()
+                    .build();
+
+            HttpResponse<String> res = HttpClient.newHttpClient()
+                    .send(req, HttpResponse.BodyHandlers.ofString());
+
+            FoodOutlets foodOutlets = new Gson().fromJson(res.body(), FoodOutlets.class);
+            totalPages = foodOutlets.getTotal_pages();
+
+            for(FoodOutlet restaurant : foodOutlets.getData()) {
+                int restaurantVotes = restaurant.getUser_rating().getVotes();
+                double restaurantRating = restaurant.getUser_rating().getAverage_rating();
+
+                if(votes <= restaurantVotes) {
+                    if(bestRestaurantRating < restaurantRating) {
+                        bestRestaurantVotes = restaurantVotes;
+                        bestRestaurantName = restaurant.getName();
+                        bestRestaurantRating = restaurantRating;
+                    } else if(bestRestaurantRating == restaurantRating && bestRestaurantVotes < restaurantVotes) {
+                        bestRestaurantVotes = restaurantVotes;
+                        bestRestaurantName = restaurant.getName();
+                        bestRestaurantRating = restaurantRating;
+                    }
+                }
+            }
+        }
+
+        return bestRestaurantName;
     }
 
     @Test void testSolution_2() throws IOException, URISyntaxException, InterruptedException {
