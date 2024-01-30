@@ -41,6 +41,7 @@ public class Ford_2 {
     private static final String URL = "https://jsonmock.hackerrank.com/api/food_outlets?";
 
     /**
+     * Retrieve restaurant w/ highest rating given a city & min vote count
      *
      * @param city  - Name of the city whose outlets have to be filtered
      * @param votes - Min # of votes required
@@ -52,7 +53,10 @@ public class Ford_2 {
         String bestRestaurantName = "";
         double bestRestaurantRating = 0;
 
+        // Iterate all GET response pages
         while(page <= totalPages) {
+
+            // Setup HTTP GET Request
             HttpRequest req = HttpRequest.newBuilder()
                     .uri(new URI(URL
                             + "city=" + city
@@ -60,16 +64,20 @@ public class Ford_2 {
                     .GET()
                     .build();
 
+            // Send HTTP GET request
             HttpResponse<String> res = HttpClient.newHttpClient()
                     .send(req, HttpResponse.BodyHandlers.ofString());
 
+            // Extract food outlets from HTTP GET response & set total pages
             FoodOutlets foodOutlets = new Gson().fromJson(res.body(), FoodOutlets.class);
             totalPages = foodOutlets.getTotal_pages();
 
+            // Iterate food outlets for current page
             for(FoodOutlet restaurant : foodOutlets.getData()) {
                 int restaurantVotes = restaurant.getUser_rating().getVotes();
                 double restaurantRating = restaurant.getUser_rating().getAverage_rating();
 
+                // Check that current restaurant has required votes & test rating
                 if(votes <= restaurantVotes) {
                     if(bestRestaurantRating < restaurantRating) {
                         bestRestaurantVotes = restaurantVotes;
