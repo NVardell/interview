@@ -95,9 +95,10 @@ public class Ford_2 {
         return bestRestaurantName;
     }
 
-    @Test void testSolution_2() {
+    @Test void testSolution() {
         assertThat(bestRestaurant("Seattle", 500), is("Cafe Juanita"));
         assertThat(bestRestaurant("Chicago", 4000), is("AB's - Absolute Barbecues"));
         assertThat(bestRestaurant("Boston", 750), is("Uncle Jack's"));
+        assertThat(bestRestaurant("Miami", 453), is("Pirates of Grill"));
     }
 }
