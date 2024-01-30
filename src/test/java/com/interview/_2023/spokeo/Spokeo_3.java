@@ -1,8 +1,9 @@
 package com.interview._2023.spokeo;
 
 import com.google.gson.Gson;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
-import com.interview.common.outlet.FoodOutlets;
 import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
@@ -20,7 +21,7 @@ import static org.hamcrest.Matchers.is;
  *      - REST API: The Best Restaurant
  * NOTES
  *      - Use the HTTP GET method to retrieve information from a database of restaurant information.
- *        Query https://jsonmock.hackerrank.com/api/food_out/ets to find all the records.  The query
+ *        Query https://jsonmock.hackerrank.com/api/food_outlets to find all the records.  The query
  *        result is paginated and can be further accessed by appending to the query string '?page=num'
  *        where 'num' is the page number.
  *      - The response is a JSON object with the following 5 fields:
@@ -51,6 +52,7 @@ import static org.hamcrest.Matchers.is;
  */
 public class Spokeo_3 {
 
+    private static final String URL = "https://jsonmock.hackerrank.com/api/food_outlets?";
 
     /**
      * Given a city & cost, return the best restaurant in town!
@@ -81,25 +83,63 @@ public class Spokeo_3 {
      * @param cost - Max estimated cost of an outlet
      * @return restaurant - Highest rating @ cost
      */
-    public static String bestRestaurant(String city, int cost) throws IOException, URISyntaxException, InterruptedException {
+    public static String bestRestaurant_v1(String city, int cost) throws IOException, URISyntaxException, InterruptedException {
 
+        String bestRestaurant = "";
+        double bestRestaurantRating = 0;
+        int page = 1, totalPages = 1;
 
-        HttpRequest req = HttpRequest.newBuilder()
-                .uri(new URI("https://jsonmock.hackerrank.com/api/food_outlets"))
-                .GET()
-                .build();
+        // Iterate GET responses for every result page
+        while(page <= totalPages) {
+            HttpRequest req = HttpRequest.newBuilder()
+                    .uri(new URI(URL
+                            + "city=" + city
+                            + "&page=" + page++))
+                    .GET()
+                    .build();
 
-        HttpResponse<String> res = HttpClient.newHttpClient()
-                .send(req, HttpResponse.BodyHandlers.ofString());
+            HttpResponse<String> res = HttpClient.newHttpClient()
+                    .send(req, HttpResponse.BodyHandlers.ofString());
 
-        FoodOutlets foodOutlets = new Gson().fromJson(res.body(), FoodOutlets.class);
-        JsonObject jsonResponse = new Gson().fromJson(res.body(), JsonObject.class);
+            // Convert GET req to workable JSON Object & set total pages
+            JsonObject jsonRes = new Gson().fromJson(res.body(), JsonObject.class);
+            totalPages = jsonRes.get("total_pages").getAsInt();
 
-        return null;
+            // Extract array of food outlets (restaurants)
+            JsonArray data = jsonRes.getAsJsonArray("data");
+
+            // Iterate list of restaurants
+            for(JsonElement e : data) {
+                String currentRestaurantName = e.getAsJsonObject().get("name").getAsString();
+                int estimatedCost = e.getAsJsonObject().get("estimated_cost").getAsInt();
+                double rating = e.getAsJsonObject().get("user_rating").getAsJsonObject().get("average_rating").getAsDouble();
+
+                // Compare estimate to input cost & set best restaurant
+                if(estimatedCost <= cost) {
+                    if(bestRestaurantRating < rating) {
+                        bestRestaurantRating = rating;
+                        bestRestaurant = currentRestaurantName;
+                    }
+                    else if(bestRestaurantRating == rating) {
+                        // Compare restaurant names to find lexicographical/alphabetical precedence
+                        // (This is dumb. Should be outlet with most votes. Logically, that makes the most sense.)
+                        if(0 < bestRestaurant.compareTo(currentRestaurantName)) {
+                            bestRestaurantRating = rating;
+                            bestRestaurant = currentRestaurantName;
+                        }
+                    }
+                }
+            }
+        }
+
+        return bestRestaurant;
     }
 
 
-    @Test void testStuff() throws IOException, URISyntaxException, InterruptedException {
-        assertThat(bestRestaurant("Seattle", 120), is("TBC Sky Lounge"));
+    @Test void testStuff_v1() throws IOException, URISyntaxException, InterruptedException {
+        assertThat(bestRestaurant_v1("Seattle", 120), is("TBC Sky Lounge"));
+        assertThat(bestRestaurant_v1("Austin", 10), is("Kadak Bhagat"));
+        assertThat(bestRestaurant_v1("Chicago", 150), is("AB's - Absolute Barbecues"));
     }
+
 }
