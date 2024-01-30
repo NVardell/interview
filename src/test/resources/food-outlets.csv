@@ -1,0 +1,401 @@
+id,city,name,estimated_cost,average_rating,votes
+41,Seattle,Cafe Juanita,160,4.9,16203
+42,Seattle,Cafe Munir,160,4.9,4699
+43,Seattle,Flechazo,140,4.8,2663
+44,Seattle,Vanilla Sky,120,4.6,645
+45,Seattle,The Shambles,110,4.4,2116
+46,Seattle,Stories,150,4.5,2087
+47,Seattle,Big Pitcher,180,4.7,9011
+48,Seattle,The Black Pearl,150,4.8,6976
+49,Seattle,Truffles,90,4.7,14611
+410,Seattle,Biergarten,240,4.7,299
+411,Seattle,TBC Sky Lounge,10,4.7,6577
+412,Seattle,The Pump House,150,4.3,588
+413,Seattle,JuneBaby,80,4.4,1880
+414,Seattle,Brew and Barbeque - A Microbrewery Pub,140,4.7,5695
+415,Seattle,Simon Says Brew Works,140,4.5,1855
+416,Seattle,Communiti,150,4.6,3837
+417,Seattle,Asia Kitchen By Mainland China,150,4.9,2133
+418,Seattle,Addo,140,4.7,6860
+419,Seattle,The Pallet,160,4.4,2390
+420,Seattle,Hammered,130,4.6,4562
+421,Seattle,Sidewalk - The Garden Bar,130,4.5,2877
+422,Seattle,Brooks and Bonds Brewery,160,4.5,3825
+423,Seattle,Toit,150,4.7,14938
+424,Seattle,AB's - Absolute Barbecues,160,4.8,11871
+425,Seattle,Frelard Tamales,150,4.6,4604
+426,Seattle,Xi'an Noodles,140,4.8,10330
+427,Seattle,Levitate Brewery and Kitchen,150,4.4,329
+428,Seattle,Baar Union,850,4.7,558
+429,Seattle,La Carta de Oaxaca,240,4.7,6829
+430,Seattle,XOOX Brewmill,200,4.4,1483
+431,Seattle,The Globe Grub,130,4.8,3790
+432,Seattle,The Bier Library,200,4.3,476
+433,Seattle,Vapour Brewpub and Diner,140,4.6,2703
+434,Seattle,AB's - Absolute Barbecues,160,4.9,6309
+435,Seattle,Off The Rez Cafe,140,4.4,2960
+436,Seattle,Jetlag,1650,4.1,704
+437,Seattle,Barbeque Nation,160,4.7,7148
+438,Seattle,The Boozy Griffin,180,4.8,4459
+439,Seattle,The Reservoire,130,4.5,2495
+440,Seattle,The Big Barbeque,150,4.5,455
+11,Miami,The Drunken Botanist,150,4.3,4145
+12,Miami,Kamonegi,130,4.6,12868
+13,Miami,Plum By Bent Chair,180,4.5,308
+14,Miami,AIR- An Ivory Region,10,4,901
+15,Miami,Local,160,4.3,5117
+16,Miami,Joule,160,4.4,7171
+17,Miami,AMA Cafe,450,4.4,2929
+18,Miami,The Junkyard Cafe,150,4.4,4998
+19,Miami,Pirates of Grill,200,4.8,4879
+110,Miami,38 Barracks,160,4.6,2872
+111,Miami,The Burger Club,60,4.2,2332
+112,Miami,Lord of the Drinks,220,4.5,8759
+113,Miami,Odeon Social,130,4.4,5205
+114,Miami,The Flying Saucer Cafe,160,4.4,7370
+115,Miami,AB's - Absolute Barbecues,160,4.6,3079
+116,Miami,Canlis,70,4.8,3421
+117,Miami,Pirates of Grill,150,4.6,4473
+118,Miami,Decode Air Bar,150,4.9,452
+119,Miami,Ba Sa,180,4.7,2899
+120,Miami,Warehouse Cafe,150,4.4,9391
+121,Miami,Chili's Grill & Bar,150,4.5,3094
+122,Miami,Chili's Grill & Bar,150,4.4,1857
+123,Miami,Themis Barbecue House,140,4.5,2140
+124,Miami,Duty Bar,130,4,692
+125,Miami,Diggin,130,4.3,2098
+126,Miami,Ministry Of Beer,150,4.6,2667
+127,Miami,Cafe Wink,70,4.8,2179
+128,Miami,Decode,120,4.6,2434
+129,Miami,The Burger Club,60,4.1,2072
+130,Miami,Molecule Air Bar,150,4.3,4634
+131,Miami,The Mughal Trail,50,4.8,1139
+132,Miami,Paju,110,4.2,1770
+133,Miami,Cafeteria & Co.,90,4.5,3989
+134,Miami,Punter House Cafe Reloaded,120,4.8,1248
+135,Miami,Kedai Makan,130,4.4,1250
+136,Miami,Hello Meal,40,4,2089
+137,Miami,Spinasse,40,4.6,2329
+138,Miami,Mama's Buoi,10,4.5,2520
+139,Miami,The Bing's,80,4.7,934
+140,Miami,Dana Choga,80,4.6,2227
+21,Omaha,Jerk Shack,120,4.6,1110
+22,Omaha,Tram Deepo,120,4.2,1769
+23,Omaha,Carpe Diem,10,4.4,1863
+24,Omaha,The Saffron Tree,10,4.9,1048
+25,Omaha,Baccara,80,4.2,1086
+26,Omaha,JW Kitchen - JW Marriott Hotel Omaha,300,4.7,3326
+27,Omaha,Barbeque Nation,180,4.8,4427
+28,Omaha,Echoes Omaha,130,4.9,232
+29,Omaha,Five Mad Men,10,4.5,1158
+210,Omaha,Pepper Chino,120,4.7,771
+211,Omaha,Aaira,180,4.4,861
+212,Omaha,What's Up,150,4.3,3976
+213,Omaha,India Restaurant,90,4.5,3695
+214,Omaha,Peter Cat,120,4.2,11183
+215,Omaha,Sly Fox Gastro Club,1250,4.5,1085
+216,Omaha,Momo I Am,60,4.4,1522
+217,Omaha,Spice Kraft,120,4.7,4732
+218,Omaha,Bawarchi Family Restaurant,80,4,1381
+219,Omaha,Mocambo,110,4.2,6103
+220,Omaha,Cafe Mezzuna,160,4.5,1234
+221,Omaha,Taurus Ox,60,4.3,2015
+222,Omaha,Stateside,550,4.1,1210
+223,Omaha,Momo I Am,60,4.4,1541
+224,Omaha,Zam Zam,50,4.3,572
+225,Omaha,Cassoulet Restaurant,40,3.7,2833
+226,Omaha,Oudh 1590,120,4.2,3731
+227,Omaha,Hard Rock Cafe,10,4.1,1823
+228,Omaha,The Great Biryani Co.,550,4,1744
+229,Omaha,Chili's Grill & Bar,170,4.6,2950
+230,Omaha,Ocean Grill,150,4.4,2269
+231,Omaha,Capella - Altair Boutique Hotel,160,4.3,1189
+232,Omaha,Chili's Grill & Bar,170,4.6,6998
+233,Omaha,Seven kingdom,750,4.2,636
+234,Omaha,Pa Pa Ya,200,4.8,1245
+235,Omaha,Afraa Restaurant And Lounge,180,4.3,2267
+236,Omaha,Barbeque Nation,180,4.9,8115
+237,Omaha,Blue Mug,70,4.3,3117
+238,Omaha,Chez - Pan Oriental Kitchen,80,4.6,1037
+239,Omaha,Plum Bistro,550,4.3,1595
+240,Omaha,The Irish House,190,4.4,3428
+71,Dallas,The Black Pearl,150,4.6,827
+72,Dallas,Coal Barbecues,140,4.9,6025
+73,Dallas,Coal Barbecues,140,4.9,4973
+74,Dallas,By Tae,140,4.6,435
+75,Dallas,Paradise,80,4.3,4246
+76,Dallas,Onesta,60,4.5,3971
+77,Dallas,Copper Kitchen,80,4.6,3494
+78,Dallas,Palmshore,850,4.6,2491
+79,Dallas,Axpress BBQ,70,4.7,419
+710,Dallas,BLIND CH3MISTRY,70,4.4,1173
+711,Dallas,Palmshore,850,4.4,2905
+712,Dallas,Barbeque Nation,150,4.8,5210
+713,Dallas,Barbeque Nation,150,4.8,1741
+714,Dallas,AB's - Absolute Barbecues,140,4.9,9234
+715,Dallas,Palmshore,850,4.5,2066
+716,Dallas,Guntur Gongura,40,3.7,1962
+717,Dallas,Dhaba Estd 1986 Delhi,110,4.5,1026
+718,Dallas,AB's - Absolute Barbecues,140,4.9,1936
+719,Dallas,Cleo's Grill & Cafe,120,4.4,2328
+720,Dallas,Barbeque Nation,150,4.4,965
+721,Dallas,Fromage,120,4.5,717
+722,Dallas,Paradise,80,4.1,1316
+723,Dallas,AB's - Absolute Barbecues,140,4.9,3062
+724,Dallas,Palmshore,850,4.5,1374
+725,Dallas,Kipling Cafe,240,4.2,1870
+726,Dallas,Joker's Kitchen,60,4.4,571
+727,Dallas,Amelie's,90,4.4,1147
+728,Dallas,Grill Box - Unlimited BBQ,120,4.7,1487
+729,Dallas,AB's - Absolute Barbecues,140,4.9,1952
+730,Dallas,Chili's American Grill & Bar,140,4.8,2666
+731,Dallas,27 Culinary Street,130,4.4,986
+732,Dallas,Big Bang Theory - Bar & Kitchen,150,4.2,1169
+733,Dallas,Lloyd's Tea House,10,4.3,1336
+734,Dallas,Nasi And Mee,120,4.7,1265
+735,Dallas,Yaa Mohideen Biryani,40,4.4,2606
+736,Dallas,Copper Kitchen,80,4.3,1652
+737,Dallas,Bateau,80,4.9,1352
+738,Dallas,Writer's Cafe,50,4.5,1601
+739,Dallas,VB Signature - Progressive Veg Restaurant,10,4.5,861
+740,Dallas,Maplai,10,4.5,4130
+31,Denver,Sushi Kashiba,180,4.9,4175
+32,Denver,Peninsula Grand Hotel,120,4.9,644
+33,Denver,Lord Of The Drinks,150,4.7,2316
+34,Denver,Lord of the Drinks,150,4.8,2086
+35,Denver,JLWA,160,4.7,2825
+36,Denver,Plum by Bent Chair,180,4.9,1657
+37,Denver,Hitchki,120,4.8,3174
+38,Denver,Carter Road Social,140,4.6,2311
+39,Denver,R' ADDA,120,4.9,4255
+310,Denver,Ada Kitchen,180,4.5,3840
+311,Denver,Hitch,120,4.8,3277
+312,Denver,The Fusion Kitchen,160,4.5,1463
+313,Denver,Social,140,4.6,7838
+314,Denver,Rude Lounge,160,4.1,4353
+315,Denver,Hi Lounge,120,4.7,1687
+316,Denver,BKC DIVE,10,4.6,5687
+317,Denver,Capital Social,140,4.4,2937
+318,Denver,Joey's Pizza,80,4.6,6909
+319,Denver,Chili's American Grill & Bar,140,4.6,6814
+320,Denver,Vedge,10,4.7,3837
+321,Denver,Joey's Pizza,80,4.6,8289
+322,Denver,Grandmama's Cafe,110,4,3089
+323,Denver,Fun Republic Social,90,4.6,2914
+324,Denver,English Kitchen,150,4.6,1887
+325,Denver,Pi Bar and Kitchen,160,4.6,1927
+326,Denver,Coffee Culture,80,4.1,5634
+327,Denver,S Kitchen,160,4.5,1980
+328,Denver,Timess Square,80,4.4,1648
+329,Denver,House Of Tipsy,180,4.5,1558
+330,Denver,Yauatcha,280,4.8,5359
+331,Denver,HOP : House of Party,160,4.7,813
+332,Denver,Palladium Social,140,4.9,4892
+333,Denver,Bayroute,300,4.8,1466
+334,Denver,Garage Inc. Public House,150,4.5,684
+335,Denver,Jimis Burger,70,4.6,3680
+336,Denver,Eat Play Love,60,4,1178
+337,Denver,Tipsy Gypsy,150,4.5,2918
+338,Denver,Cafe Safar,60,4,2640
+339,Denver,The Cult,170,4.4,3037
+340,Denver,MRP - My Regular Place,130,4,2302
+271,Portland,Cafe Campagne,50,4.9,1817
+272,Portland,Little Neon Taco,20,4.5,780
+273,Portland,Domino's Pizza,70,4,939
+274,Portland,Ka Cho,450,4.1,692
+275,Portland,Seasons Restaurant,80,4,410
+276,Portland,Meskel,80,4.2,562
+277,Portland,Maneki,250,4,333
+278,Portland,Punjabi Kitchen,50,4.1,483
+279,Portland,KFC,50,4.1,521
+2710,Portland,New Kathi Kabab,40,4.1,554
+2711,Portland,Domino's Pizza,70,3.6,50
+2712,Portland,The Breaking Bread,60,4.5,361
+2713,Portland,Kareem's,10,4.2,444
+2714,Portland,Moti Mahal Delux Tandoori Trail,10,4.5,434
+2715,Portland,Second Wife Restaurant,350,4.2,235
+2716,Portland,Domino's Pizza,70,3.7,455
+2717,Portland,Prana,10,4.6,343
+2718,Portland,The Best,80,4.2,344
+2719,Portland,Jashn,60,4.3,321
+2720,Portland,Seventh Heaven,40,4.3,491
+2721,Portland,Nirvana,110,4.6,285
+2722,Portland,KFC,50,4.2,266
+2723,Portland,Kitchen H,350,3.9,136
+2724,Portland,Hot Lips,50,4.1,269
+2725,Portland,Pizza Hut,70,4.1,294
+2726,Portland,K The Veg Restaurant,50,4.3,370
+2727,Portland,V Restaurant,60,4,219
+2728,Portland,Fork N Cork,70,4.3,197
+2729,Portland,Cafe Zam Zam,450,4.1,258
+2730,Portland,The Kav's,40,3.6,271
+2731,Portland,Chaibubble,60,4.4,171
+2732,Portland,Aroma - The Royal Retreat,150,3.9,150
+2733,Portland,Kullhad,350,4.4,216
+2734,Portland,FOODISM,20,3.8,184
+2735,Portland,Hoppipola,120,4,188
+2736,Portland,Hot Lips,10,3.9,236
+2737,Portland,Swad Desh,50,4,217
+2738,Portland,The Urban Brava,80,4.2,232
+2739,Portland,Yellow Sapphire - Hotel Capitol Hill,10,4.4,252
+2740,Portland,Vidorra Restro & Lounge,10,3,197
+121,Boston,Boathouse,150,4.5,1061
+122,Boston,Sector 7 Social,140,4.8,2435
+123,Boston,Food@U,70,4.2,2056
+124,Boston,The Night Factory,80,3.9,1983
+125,Boston,La Pino'z Pizza,550,4.3,1271
+126,Boston,Bhena Da Dhaba,250,3.8,1466
+127,Boston,Cafe Z,120,4.5,1181
+128,Boston,Burger King,50,3.9,1082
+129,Boston,Subway,50,4.2,1147
+1210,Boston,La Pino'z Pizza,550,4.5,855
+1211,Boston,Al Lazeezo,50,4.2,626
+1212,Boston,Amrit Sweets,70,4,963
+1213,Boston,Falcon Cafe Lounge,110,4.7,1456
+1214,Boston,Amritsari Kulcha Hub,250,4,1122
+1215,Boston,Pyramid,150,4.3,657
+1216,Boston,New Panna Sweets,30,4,1675
+1217,Boston,The Hedgehog Cafe,120,4.8,926
+1218,Boston,Pizza Freakerz,350,4.2,866
+1219,Boston,Boston Flavours,550,3.9,1051
+1220,Boston,Katani,450,4.1,1334
+1221,Boston,Pho Bac Súp Shop,30,4.1,1188
+1222,Boston,Biryani By Kilo,70,4.3,417
+1223,Boston,Khalsa Dhaba,50,3.9,105
+1224,Boston,City Cabana,130,4.1,291
+1225,Boston,Chaska 11,60,4.1,872
+1226,Boston,Beach N Brew,180,4.3,141
+1227,Boston,Khalsa Dhaba,40,4.1,130
+1228,Boston,Brooklyn Central,130,4.6,1222
+1229,Boston,Uncle Jack's,80,4.9,1537
+1230,Boston,KFC,50,4,890
+1231,Boston,K Cafe,250,4.2,1132
+1232,Boston,Sodhi's Zaika,150,4,952
+1233,Boston,Chinese Fast Food,30,3.7,954
+1234,Boston,The Last Course,60,4.4,564
+1235,Boston,The G.T. Road,140,4.4,372
+1236,Boston,Shirdi Food & Snacks,350,4.1,948
+1237,Boston,Amigo's Cafe,50,4.3,1099
+1238,Boston,The Shooters Cafe,70,4,636
+1239,Boston,Lah Di Dah,120,4.2,505
+1240,Boston,Subway,50,4.1,648
+51,Chicago,Flechazo,140,4.9,2205
+52,Chicago,Culture,130,4.1,2648
+53,Chicago,Social,150,4.5,2118
+54,Chicago,Autobahn,130,4.8,2562
+55,Chicago,Universal Barbeque,120,4.6,1227
+56,Chicago,Barbeque Ville,10,4.5,1439
+57,Chicago,Kargo,10,4.4,2059
+58,Chicago,Teddy Boy,120,4.3,4063
+59,Chicago,AB's - Absolute Barbecues,140,4.9,4859
+510,Chicago,Kopp,120,4.4,1052
+511,Chicago,Noodle House,70,4.6,1244
+512,Chicago,Le Plaisir,10,4.8,4211
+513,Chicago,Cafe 1730,150,4.6,3156
+514,Chicago,Mughal Mahal,90,4.6,2316
+515,Chicago,Sentosa MultiCuisine Restaurant,120,4.9,984
+516,Chicago,The FML Lounge,110,4.1,1772
+517,Chicago,BarBerry,120,4.3,1490
+518,Chicago,Tatva,850,4.4,2039
+519,Chicago,The FML Lounge,110,4.3,728
+520,Chicago,Bonsouth,120,4.6,454
+521,Chicago,Laa Unico,140,4.7,1207
+522,Chicago,The K Factory,10,4.3,3225
+523,Chicago,Agent Jack's,130,4.2,2189
+524,Chicago,Cafe Goodluck,60,4.3,6589
+525,Chicago,11 East Street Cafe,180,4.2,3584
+526,Chicago,AB's - Absolute Barbecues,140,4.7,1581
+527,Chicago,Tarsh Gastronomia,150,4.4,1796
+528,Chicago,Cafe 1730,130,4.4,1082
+529,Chicago,Tales & Spirits,120,4.3,3496
+530,Chicago,Tawa Street,50,4,1011
+531,Chicago,Publiq,140,4,1426
+532,Chicago,Anna Idli,450,4.5,2461
+533,Chicago,Publiq,140,4.3,735
+534,Chicago,Gong,180,4.8,1145
+535,Chicago,Barbeque Ville,10,4.7,662
+536,Chicago,Fish Curry Rice,120,4.6,385
+537,Chicago,Agent Jack's,130,4.5,3750
+538,Chicago,Tales & Spirits,120,4.2,1580
+539,Chicago,Musang,50,4.4,5123
+540,Chicago,Effingut Brewerkz,170,4.6,2421
+111,Austin,The Esplendido Cafe,80,4.5,719
+112,Austin,Shree Annapurna,50,4,1680
+113,Austin,Bogarosa,80,4.1,1074
+114,Austin,Mocha,80,4.6,2225
+115,Austin,I Love Sandwich House,90,4.1,104
+116,Austin,Yanki Sizzlers,120,4.8,679
+117,Austin,Huber & Holly,80,4.7,1284
+118,Austin,Yanki Sizzlers,120,4.9,3221
+119,Austin,Makeba - The Lounge Cafe,10,4.2,215
+1110,Austin,Coffee Culture,80,4,173
+1111,Austin,Ph Se Food,90,4.2,404
+1112,Austin,Mocha,80,4.4,916
+1113,Austin,Kabir Restaurant,60,4.1,2822
+1114,Austin,Rp's Pizzeria,550,4.4,639
+1115,Austin,La Pino'z Pizza,70,4.5,2227
+1116,Austin,Tea Villa Cafe,10,4.2,646
+1117,Austin,Forking Awesome,70,4.5,185
+1118,Austin,Queso Y Cafe,70,4.2,661
+1119,Austin,Kadak Bhagat,10,4.6,253
+1120,Austin,Fozzie's Pizzaiolo. Cafe. Deli,90,4.1,1617
+1121,Austin,The Cafe Baraco,750,4.1,1313
+1122,Austin,The Secret Kitchen,110,4.1,356
+1123,Austin,Anjoy Latenight Meals,50,4.3,1076
+1124,Austin,Yash's GBT,80,4.1,558
+1125,Austin,Honest,70,3.7,943
+1126,Austin,Eleven 11 Restro Cafe,10,4.2,968
+1127,Austin,Parosa,80,4,713
+1128,Austin,Standard's Punjabi Khana,450,3.7,1030
+1129,Austin,Bar del Corso,50,4.7,470
+1130,Austin,Brick Kitchen - Five Petals,90,4.4,1337
+1131,Austin,Little French House,10,4.3,185
+1132,Austin,Cafe De Italiano,950,4.3,693
+1133,Austin,RP's Pizzeria,550,4.4,940
+1134,Austin,Lady Jaye,60,4.6,1227
+1135,Austin,The Dhaba,60,4.5,261
+1136,Austin,Food On Way,40,3.9,2627
+1137,Austin,Kadak Bhagat,120,4.7,258
+1138,Austin,Unlocked,10,4.4,1202
+1139,Austin,Kaffee - Mast Hai,750,4.4,864
+1140,Austin,Nini's Kitchen,10,4.5,1809
+91,Houston,Double Roti,70,4.2,312
+92,Houston,Ifthar,350,4,732
+93,Houston,Kashi Art Cafe,60,4.4,1209
+94,Houston,Cafe 17,70,4.6,877
+95,Houston,The Grill Lab,70,4.3,579
+96,Houston,Mocha Art Cafe,70,4.8,566
+97,Houston,BSweets,250,4.5,168
+98,Houston,360 Degrees Pizzeria,150,4.2,427
+99,Houston,Nasi And Mee,10,4.7,196
+910,Houston,Dhe Puttu,60,4.4,1142
+911,Houston,Hotel Harsh Dhaba,250,4.1,579
+912,Houston,Mi Casa,50,4.1,234
+913,Houston,Al Reem Kuzhimandi,40,4.4,915
+914,Houston,Bloomsbury's Global Kitchen & Bakehouse,650,4.4,882
+915,Houston,Paragon,90,4.5,1422
+916,Houston,Tonico Cafe,40,4.3,917
+917,Houston,Barbeque Nation,150,4.9,925
+918,Houston,Zaatar Arabic Restaurant,30,4.2,283
+919,Houston,Seagull Restaurant,80,3.8,499
+920,Houston,The Voyager,60,4,514
+921,Houston,Ming's Wok,550,4.2,490
+922,Houston,Cafe d' arabia,50,4.1,502
+923,Houston,The Asian Kitchen by Tokyo Bay,110,4.5,308
+924,Houston,ChaiCofi,750,4.3,503
+925,Houston,Sethi Da Dhaba,50,4.1,451
+926,Houston,French Toast,70,4.6,579
+927,Houston,Zaatar Arabic Restaurant,50,4.1,395
+928,Houston,Milano Ice Cream,30,4.7,567
+929,Houston,Sheba Kuzhimandhi,40,4.2,403
+930,Houston,KFC,50,3.4,455
+931,Houston,Thaal Kitchen,30,3.6,607
+932,Houston,Thakkaaram,60,3.9,619
+933,Houston,Alakapuri,30,4.2,659
+934,Houston,Nawras Seafood Restaurant,10,4.3,541
+935,Houston,Palaaram,550,4.1,370
+936,Houston,Brindhavan Vegetarian Restaurant,30,4.3,507
+937,Houston,Mustake Multicuisine Restaurant,10,3.9,567
+938,Houston,Cocoa Tree,10,4.5,969
+939,Houston,Chiyang,450,4,590
+940,Houston,Ikka's Restaurant,60,3.6,112
