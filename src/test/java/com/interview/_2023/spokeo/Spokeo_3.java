@@ -4,6 +4,8 @@ import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
+import com.interview.common.outlet.FoodOutlet;
+import com.interview.common.outlet.FoodOutlets;
 import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
@@ -135,11 +137,57 @@ public class Spokeo_3 {
         return bestRestaurant;
     }
 
-
     @Test void testStuff_v1() throws IOException, URISyntaxException, InterruptedException {
         assertThat(bestRestaurant_v1("Seattle", 120), is("TBC Sky Lounge"));
         assertThat(bestRestaurant_v1("Austin", 10), is("Kadak Bhagat"));
         assertThat(bestRestaurant_v1("Chicago", 150), is("AB's - Absolute Barbecues"));
     }
 
+
+
+    public static String bestRestaurant_v2(String city, int cost) throws IOException, URISyntaxException, InterruptedException {
+
+        String bestRestaurant = "";
+        int page = 1, totalPages = 1;
+        double bestRestaurantRating = 0;
+
+        while(page <= totalPages) {
+            HttpRequest req = HttpRequest.newBuilder()
+                    .uri(new URI(URL
+                            + "city=" + city
+                            + "&page=" + page++))
+                    .GET()
+                    .build();
+
+            HttpResponse<String> res = HttpClient.newHttpClient()
+                    .send(req, HttpResponse.BodyHandlers.ofString());
+
+            FoodOutlets foodOutlets = new Gson().fromJson(res.body(), FoodOutlets.class);
+            totalPages = foodOutlets.getTotal_pages();
+
+            for(FoodOutlet restaurant : foodOutlets.getData()) {
+                if(cost >= restaurant.getEstimated_cost()) {
+                    double restRating = restaurant.getUser_rating().getAverage_rating();
+
+                    if(bestRestaurantRating < restRating) {
+                        bestRestaurantRating = restRating;
+                        bestRestaurant = restaurant.getName();
+                    } else if(bestRestaurantRating == restRating) {
+                        if(0 < bestRestaurant.compareTo(restaurant.getName())) {
+                            bestRestaurantRating = restRating;
+                            bestRestaurant = restaurant.getName();
+                        }
+                    }
+                }
+            }
+        }
+
+        return bestRestaurant;
+    }
+
+    @Test void testStuff_v2() throws IOException, URISyntaxException, InterruptedException {
+        assertThat(bestRestaurant_v2("Seattle", 120), is("TBC Sky Lounge"));
+        assertThat(bestRestaurant_v2("Austin", 10), is("Kadak Bhagat"));
+        assertThat(bestRestaurant_v2("Chicago", 150), is("AB's - Absolute Barbecues"));
+    }
 }
