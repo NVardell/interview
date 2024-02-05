@@ -26,23 +26,28 @@ public class Apple_1 {
 
     private int solution(String s) {
 
+        // Create sb with string value
         StringBuilder sb = new StringBuilder(s);
-        boolean looping = true, match;
 
-        while(looping) {
+        // Tracking bool
+        boolean match=true;
+
+        // Loop while matches exist
+        while(match) {
+
+            // Stop loop if no matches are found
             match=false;
+
+            // Iterate sb chars & remove '01' || '10' matches
             for (int i = 0; i < sb.length() - 1; i++)
                 if (sb.charAt(i) == '0' && sb.charAt(i + 1) == '1'
                         || sb.charAt(i) == '1' && sb.charAt(i + 1) == '0') {
-                    sb.delete(i, i + 2);
-                    match = true;
-                    break;
+                    sb.delete(i, i + 2);  // Remove match chars from string
+                    match = true;         // Set true & new sb string
                 }
-
-            if(!match)
-                looping=false;
         }
 
+        // Return sb length
         return sb.length();
     }
 
