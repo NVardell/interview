@@ -74,4 +74,8 @@ public class Apple_1 {
     @Test void testSolution_6() {
         assertThat(solution("10*011*00"), is(5));
     }
+
+    @Test void testSolution_7() {
+        assertThat(solution("0000001001111110*011*00***"), is(10));
+    }
 }
