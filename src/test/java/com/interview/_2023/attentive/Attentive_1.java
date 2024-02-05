@@ -3,7 +3,9 @@ package com.interview._2023.attentive;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Queue;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
@@ -29,8 +31,10 @@ import static org.hamcrest.Matchers.is;
  */
 class Attentive_1 {
 
+    private static final int[][] DIRECTIONS = {{0, 1}, {0, -1}, {-1, 0}, {1, 0}};
+
     /**
-     * Follow the path and return all of the letters collected along the way!
+     * Follow the path and return all letters collected along the way!
      *
      * @param gridMap - List of 10 strings (each having 15 characters) defining a 2D grid.
      * @return result - String made with the encountered letters, while following the path.
@@ -39,11 +43,40 @@ class Attentive_1 {
         // Return String
         StringBuilder result = new StringBuilder();
 
-        // Works High Level - Need to Add Logic for following *'s
-        for(String s : gridMap) {
-            for(char c : s.toCharArray()) {
-                if(c != '*' && Character.isLetter((Character)c))
-                    result.append(c);
+        // Grid Dimensions
+        int width = gridMap.size(), length = gridMap.get(0).length();
+
+        // Visited Grid
+        boolean[][] visited = new boolean[width][length];
+
+        // Create queue & Add starting point & Mark visited
+        Queue<int[]> q = new LinkedList<>();
+        q.add(new int[]{0, 0});
+        visited[0][0] = true;
+
+        // Iterate queue until empty
+        while(!q.isEmpty()){
+            // Remove from queue & Mark visited
+            int[] pos = q.remove();
+            visited[pos[0]][pos[1]] = true;
+
+            // Extract char from grid
+            char c = gridMap.get(pos[0]).charAt(pos[1]);
+
+            // Add char to return string if it's a letter
+            if(Character.isLetter(c))
+                result.append(c);
+
+            // Find neighbors & Add to queue
+            for (int[] neighbor : DIRECTIONS) {
+                int x = pos[0] + neighbor[0];
+                int y = pos[1] + neighbor[1];
+
+                if (x >= 0 && y >= 0
+                        && x < width && y < length
+                        && gridMap.get(x).charAt(y) != ' '
+                        && !visited[x][y])
+                    q.add(new int[]{x, y});
             }
         }
 
@@ -89,11 +122,11 @@ class Attentive_1 {
                 "*             i",
                 "*             h",
                 "a             g",
-                "              *",
-                "              *",
+                "*             *",
+                "*             *",
                 "b             *",
-                "              f",
-                "              *",
+                "*             f",
+                "*             *",
                 "cde************"
         );
         assertThat(solution(gridMap), is("abcdefghijklmno"));
