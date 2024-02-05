@@ -9,7 +9,7 @@ import static org.hamcrest.Matchers.is;
  * NAME
  *      - Smallest String
  * NOTES
- *      - You hae a string consisting of zeros, ones, and asterisks.
+ *      - You have a string consisting of zeros, ones, and asterisks.
  *        Consider the following operation:
  *          + Choose any two adjacent positions in the string
  *          + If one of them is 0, and the other is 1, remove them.
@@ -26,11 +26,35 @@ public class Apple_1 {
 
     private int solution(String s) {
 
-        int length = s.length();
-
         StringBuilder sb = new StringBuilder(s);
+        boolean looping = true, match = false;
+
+        while(looping) {
+            match=false;
+            for (int i = 0; i < sb.length() - 1; i++) {
+                System.out.println("i=" + i);
+                if (sb.charAt(i) == '0' && sb.charAt(i + 1) == '1' || sb.charAt(i) == '1' && sb.charAt(i + 1) == '0') {
+                    System.out.println("length=" + sb.length() + "\tsb=" + sb);
+                    sb.delete(i, i + 2);
+                    System.out.println("length=" + sb.length() + "\tsb=" + sb);
+                    match=true;
+                    System.out.println("breaking from if");
+                    break;
+                }
+//                else {
+//                    System.out.println("ELSE\tELSE\tELSE\tELSE\t");
+//                    looping = false;
+//                }
+                System.out.println("end of for");
+
+//                else looping=false;
+            }
 
 
+            if(sb.length()==1 || !match)
+                looping=false;
+            System.out.println("end of while \t looping = " + looping);
+        }
 
         return sb.length();
     }
