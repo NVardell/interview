@@ -39,7 +39,7 @@ public class Apple_1 {
                     break;
                 }
 
-            if(sb.length()==1 || !match)
+            if(!match)
                 looping=false;
         }
 
