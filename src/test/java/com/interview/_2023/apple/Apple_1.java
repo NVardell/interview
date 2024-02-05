@@ -57,4 +57,16 @@ public class Apple_1 {
     @Test void testSolution_3() {
         assertThat(solution("111*000"), is(7));
     }
+
+    @Test void testSolution_4() {
+        assertThat(solution("111*010101"), is(4));
+    }
+
+    @Test void testSolution_5() {
+        assertThat(solution("11010110"), is(2));
+    }
+
+    @Test void testSolution_6() {
+        assertThat(solution("10*011*00"), is(5));
+    }
 }
