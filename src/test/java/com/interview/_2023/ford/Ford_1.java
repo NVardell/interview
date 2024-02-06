@@ -40,18 +40,14 @@ public class Ford_1 {
 
         for(int x : arr) {
 
-            for(int i=0; i<length; i++) {
-                List<Integer> tempList = board.get(i);
-                for(int j=0; j<width; j++) {
-                    if(x == tempList.get(j))
+            for(int i=0; i<length; i++)
+                for(int j=0; j<width; j++)
+                    if(x == board.get(i).get(j))
                         bingo[i][j] = 1;
-                }
-            }
 
             if(checkBoard(length, width, bingo))
                 return x;
         }
-
 
 
         return 0;
@@ -60,21 +56,17 @@ public class Ford_1 {
     private boolean checkBoard(int length, int width, int[][] board) {
 
         // Check rows
-        for(int[] row : board) {
-            int sum = Arrays.stream(row).boxed()
-                    .reduce(0, Integer::sum);
-            if(sum == width)
+        for(int[] row : board)
+            if(width == Arrays.stream(row).boxed().reduce(0, Integer::sum))
                 return true;
-        }
 
         // Check columns
         for(int x=0; x<width; x++) {
 
             int sum = 0;
 
-            for (int y=0; y<length; y++) {
+            for (int y=0; y<length; y++)
                 sum+=board[y][x];
-            }
 
             if(sum == length)
                 return true;
