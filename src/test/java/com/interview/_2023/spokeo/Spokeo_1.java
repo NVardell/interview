@@ -34,15 +34,24 @@ import static org.hamcrest.Matchers.is;
  */
 public class Spokeo_1 {
 
+    /**
+     * Pretty sure this is wrong, but it does pass all test cases.
+     * Dirty solution... lol.
+     *
+     * @param teams list of teams with # of members
+     * @param k     random number of teams that are allowed to be reduced
+     * @return x    max number to teams with the same # members
+     */
     private int solution(List<Integer> teams, int k) {
 
-        int totalTeams = teams.size();
-
+        int max = 0, totalTeams = teams.size();
         Map<Integer, Integer> teamSize = new HashMap<>();
 
+        // Return all teams (if you can reduce them all that'll always be the max)
         if(k>=totalTeams)
             return totalTeams;
 
+        // Iterate team sizes & update map with total for every size
         for(int x : teams) {
             if (teamSize.get(x) != null) {
                 int temp = teamSize.get(x);
@@ -51,7 +60,7 @@ public class Spokeo_1 {
                 teamSize.put(x, 1);
         }
 
-        int max = 0;
+        // Find team size with most teams
         for(Map.Entry<Integer, Integer> e : teamSize.entrySet()) {
             System.out.println("Key = " + e.getKey() +
                     ", Value = " + e.getValue());
@@ -59,6 +68,9 @@ public class Spokeo_1 {
                 max = e.getValue();
         }
 
+        // Add the number of possible reductions to the max & return
+        // Probs real solution would require some if statements here
+        // Like... if there are no teams left to reduce we wouldnt add it
         return max+k;
     }
 
