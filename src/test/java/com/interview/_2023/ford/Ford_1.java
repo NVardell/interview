@@ -34,22 +34,27 @@ public class Ford_1 {
 
     private int solution(List<List<Integer>> board, List<Integer> arr) {
 
+        // Get board dimensions
         int length = board.size(), width = board.get(0).size();
 
+        // Create bingo matrix
         int[][] bingo = new int[length][width];
 
+        // Iterate array of call #'s
         for(int x : arr) {
 
+            // Iterate board & update bingo matrix
             for(int i=0; i<length; i++)
                 for(int j=0; j<width; j++)
                     if(x == board.get(i).get(j))
                         bingo[i][j] = 1;
 
+            // Check board for bingo
             if(checkBoard(length, width, bingo))
                 return x;
         }
 
-
+        // No bingo :/
         return 0;
     }
 
@@ -57,21 +62,26 @@ public class Ford_1 {
 
         // Check rows
         for(int[] row : board)
+            // Check row sum for bingo
             if(width == Arrays.stream(row).boxed().reduce(0, Integer::sum))
                 return true;
 
         // Check columns
-        for(int x=0; x<width; x++) {
+        for(int y=0; y<width; y++) {
 
+            // Column sum
             int sum = 0;
 
-            for (int y=0; y<length; y++)
-                sum+=board[y][x];
+            // Loop rows to sum column
+            for (int x=0; x<length; x++)
+                sum+=board[x][y];
 
+            // Check for bingo
             if(sum == length)
                 return true;
         }
 
+        // No bingo
         return false;
     }
 
