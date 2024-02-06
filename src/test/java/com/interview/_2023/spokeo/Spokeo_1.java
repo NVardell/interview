@@ -53,6 +53,7 @@ public class Spokeo_1 {
 
         // Iterate team sizes & update map with total for every size
         for(int x : teams) {
+
             if (teamSize.get(x) != null) {
                 int temp = teamSize.get(x);
                 teamSize.put(x, ++temp);
@@ -61,12 +62,9 @@ public class Spokeo_1 {
         }
 
         // Find team size with most teams
-        for(Map.Entry<Integer, Integer> e : teamSize.entrySet()) {
-            System.out.println("Key = " + e.getKey() +
-                    ", Value = " + e.getValue());
+        for(Map.Entry<Integer, Integer> e : teamSize.entrySet())
             if(e.getValue() > max)
                 max = e.getValue();
-        }
 
         // Add the number of possible reductions to the max & return
         // Probs real solution would require some if statements here
