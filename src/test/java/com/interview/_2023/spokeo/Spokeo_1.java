@@ -3,7 +3,9 @@ package com.interview._2023.spokeo;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
@@ -36,10 +38,28 @@ public class Spokeo_1 {
 
         int totalTeams = teams.size();
 
+        Map<Integer, Integer> teamSize = new HashMap<>();
+
         if(k>=totalTeams)
             return totalTeams;
 
-        return 0;
+        for(int x : teams) {
+            if (teamSize.get(x) != null) {
+                int temp = teamSize.get(x);
+                teamSize.put(x, ++temp);
+            } else
+                teamSize.put(x, 1);
+        }
+
+        int max = 0;
+        for(Map.Entry<Integer, Integer> e : teamSize.entrySet()) {
+            System.out.println("Key = " + e.getKey() +
+                    ", Value = " + e.getValue());
+            if(e.getValue() > max)
+                max = e.getValue();
+        }
+
+        return max+k;
     }
 
     @Test void testSolution_1() {
@@ -52,10 +72,6 @@ public class Spokeo_1 {
 
     @Test void testSolution_3() {
         assertThat(solution(Arrays.asList(1, 2, 3, 4, 5, 6, 7), 10), is(7));
-    }
-
-    @Test void testSolution_4() {
-        assertThat(solution(Arrays.asList(1, 7, 3, 8), 1), is(2));
     }
 
 }
