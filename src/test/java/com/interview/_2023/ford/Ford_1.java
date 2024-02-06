@@ -36,18 +36,13 @@ public class Ford_1 {
 
         int length = board.size(), width = board.get(0).size();
 
-        int[] columns = new int[length], rows = new int[width];
-
         int[][] bingo = new int[length][width];
 
         for(int x : arr) {
 
-            System.out.println("looking for x=" + x);
             for(int i=0; i<length; i++) {
-                System.out.println("testing row#" + i);
                 List<Integer> tempList = board.get(i);
                 for(int j=0; j<width; j++) {
-                    System.out.println("testing row#" + i + "\tj=" + j + "\tint=" + tempList.get(j));
                     if(x == tempList.get(j))
                         bingo[i][j] = 1;
                 }
@@ -64,15 +59,10 @@ public class Ford_1 {
 
     private boolean checkBoard(int length, int width, int[][] board) {
 
-        System.out.println("CHECKING BOARD\n\n");
-
-        boolean test = false;
-
         // Check rows
         for(int[] row : board) {
             int sum = Arrays.stream(row).boxed()
                     .reduce(0, Integer::sum);
-            System.out.println(Arrays.toString(row) + "\t" + sum);
             if(sum == width)
                 return true;
         }
@@ -86,14 +76,13 @@ public class Ford_1 {
                 sum+=board[y][x];
             }
 
-            System.out.println(sum);
-
             if(sum == length)
                 return true;
         }
 
         return false;
     }
+
 
     @Test void testSolution_1() {
         assertThat(solution(Arrays.asList(
